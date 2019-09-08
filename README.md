@@ -6,12 +6,15 @@ Go Version:
 Linked Issues:
 
 - [golang/mock/283](https://github.com/golang/mock/issues/283)
-- [golang/mock/275](https://github.com/golang/mock/issues/275)
 
     Repro of Issue 283 mockgen
     
     Steps:
     1. Create a new go project
+    2. Ensure GO111MODULE has been exported with on:
+    
+            $ echo $GO111MODULE 
+            on
     2. `go mod init`
     3. add cmd/main.go with "sigs.k8s.io/controller-runtime/pkg/client" as
        an import
